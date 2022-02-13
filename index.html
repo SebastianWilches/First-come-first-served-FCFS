@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="desciption" content="Pagina web para algoritmo First come first served - FCFS">
+    <title>First come first served</title>
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <header class="header">
+        <h1>Sistemas operativos 2021-3</h1>
+        <h1>First come first served FCFS</h1>
+    </header>
+
+    <div class="contenedor">
+        <table id="tableProcesos"></table>
+        <button type="button" onclick="clickUpdateTable()">Update Table</button>
+        <div id="chartdiv"></div>
+    </div>
+    <section class="grid">
+        <form class="formulario contenedor">
+            <h2>Agregar procesos</h2>
+            <div class="campoForm">
+                <label class="campo__label">Nombre del proceso:</label>
+                <input type="text" class="campo__field" id="nameProceso" placeholder="Nombre proceso">
+            </div>
+            <div class="campoForm">
+                <label class="campo__label">Tiempo de llegada:</label>
+                <input type="text" class="campo__field" id="tLlegada" placeholder="Tiempo llegada">
+            </div>
+            <div class="campoForm">
+                <label class="campo__label">Rafaga:</label>
+                <input type="text" class="campo__field" id="rafaga" placeholder="Rafaga">
+            </div>
+
+            <div class="campoForm">
+                <input type="button" value="Agregar proceso" class="boton" onclick="clickCreateProceso()">
+            </div>
+        </form>
+        <section class="semaforoContainer">
+            <h2>Semáforo binario</h2>
+            <div class="semaforo">
+                <div class="semaforoRojo" id="semaforoRojo" style="display: block;"></div>
+                <div class="semaforoVerde" id="semaforoVerde" style="display: block;"></div>
+            </div>
+        </section>
+    </section>
+
+
+
+
+</body>
+
+<!-- Resources -->
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/plugins/timeline.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/plugins/bullets.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+<script src="procesosFCFS.js"></script>
+<script src="chartGanttFCFS.js"></script>
+<!-- <script src="test.js"></script> -->
+
+</html>
